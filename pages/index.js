@@ -20,12 +20,12 @@ function HomePage() {
                     flex: 1,
                     // backgroundColor: "red",
                 }}>
-                {/* Prop Drilling */}   
-                <Menu valorDoFiltro={valorDoFiltro} setValorDoFiltro={setValorDoFiltro} />
-                <Header />
-                <Timeline searchValue={valorDoFiltro} playlists={config.playlists}>
-                    Conteúdo
-                </Timeline>
+                    {/* Prop Drilling */}   
+                    <Menu valorDoFiltro={valorDoFiltro} setValorDoFiltro={setValorDoFiltro} />
+                    <Header />
+                    <Timeline searchValue={valorDoFiltro} playlists={config.playlists}>
+                        Conteúdo
+                    </Timeline>
             </div>
         </>
     );

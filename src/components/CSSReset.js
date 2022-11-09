@@ -10,6 +10,8 @@ export const CSSReset = createGlobalStyle`
 
     body {
         font-family: sans-serif;
+        background-color: ${({ theme }) => theme.backgroundBase};
+        color: ${({ theme }) => theme.textColorBase};
     }
 
     /* NextJS */
@@ -28,7 +30,7 @@ export const CSSReset = createGlobalStyle`
         display: flex;
         flex: 1;
     }
-    
+
     /* Globals */
     button,
     a {

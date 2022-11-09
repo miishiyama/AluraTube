@@ -34,11 +34,12 @@ export const StyledTimeline = styled.div`
             grid-template-columns: repeat(auto-fill,minmax(200px,1fr));
             grid-auto-flow: column;
             grid-auto-columns: minmax(200px,1fr);
-            overflow-x: hidden;
+            overflow-x: scroll;
             scroll-snap-type: x mandatory;
             
             a {
                 scroll-snap-align: start;
+
                 span {
                 padding-top: 8px;
                 display: block;

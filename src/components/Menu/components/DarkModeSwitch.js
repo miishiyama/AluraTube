@@ -13,13 +13,16 @@ const StyledSwitch = styled.div`
     justify-content: space-around;
     border-radius: 10000px;
     position: relative;
-
     label {
         width: 50px;
-    }
-
-    span { display: inline-flex; width: 20px; height: 20px; align-items: center; justify-content: center; }
-    
+    };
+    span {
+        display: inline-flex; 
+        width: 20px; 
+        height: 20px; 
+        align-items: center; 
+        justify-content: center;
+    };
     label:before {
         content: "";
         background-color: #fafafa;
@@ -33,27 +36,27 @@ const StyledSwitch = styled.div`
         left: 0;
         transition: .3s;
         cursor: pointer;
-    }
-
-    input[type="checkbox"] { display: none; }
-    input[type="checkbox"]:checked + label:before { transform: translateX(100%); }
+    };
+    input[type="checkbox"] {
+        display: none;
+    };
+    input[type="checkbox"]:checked + label:before {
+        transform: translateX(100%);
+    };
 `;
 
 export default function DarkModeSwitch() {
     const contexto = React.useContext(ColorModeContext);
     return (
         <StyledSwitch>
-        <input id="darkmode" type="checkbox" onChange={() => {
-            console.log("Mudou o state");
-            contexto.toggleMode();
-        }} />
-        <label
-            htmlFor="darkmode"
-            className="darkmode-switch"
-        >
-            <span>🌙</span>
-            <span>☀️</span>
-        </label>
+            <input id="darkmode" type="checkbox" onChange={() => {
+                contexto.toggleMode();
+            }} 
+            />
+            <label htmlFor="darkmode" className="darkmode-switch">
+                <span>🌙</span>
+                <span>☀️</span>
+            </label>
         </StyledSwitch>
-    )
-}
+    );
+};

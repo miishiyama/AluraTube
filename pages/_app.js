@@ -18,33 +18,30 @@ const theme = {
         backgroundLevel2: "#313131",
         borderBase: "#383838",
         textColorBase: "#FFFFFF",
-    }
+    },
 };
 
 function ProviderWrapper(props) {
     return (
-        <ColorModeProvider initialMode={"light"}>
-            {props.children}
-        </ColorModeProvider>
-    )
-}
+        <ColorModeProvider initialMode={"light"}>{props.children}</ColorModeProvider>
+    );
+};
 
 function Root({ Component, pageProps}) {
     const contexto = React.useContext(ColorModeContext);
-
     return (
         <ThemeProvider theme={theme[contexto.mode]}>
             <CSSReset />
             <Component {...pageProps} />
             <RegisterVideo />
         </ThemeProvider>
-    )
-}
+    );
+};
 
 export default function _App(props) {
     return (
         <ProviderWrapper>
             <Root {...props} />
         </ProviderWrapper>
-    )
+    );
 };

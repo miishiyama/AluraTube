@@ -2,8 +2,11 @@
 ![preview](./preview/AluraTube.png)
 
 ## Projeto 💻
-Projeto desenvolvido durante a Imersão React do Alura. <br>
-(https://www.figma.com/file/1acrju7CLwHkSh6e7xEk9h/Aluratube?t=OJ2eMKroGbD0jo6r-6)
+Projeto desenvolvido durante a Imersão React do Alura.
+
+## Layout 🔖
+Segue abaixo o layout deste projeto:
+- [Figma](https://www.figma.com/file/1acrju7CLwHkSh6e7xEk9h/Aluratube?t=OJ2eMKroGbD0jo6r-6)
 
 ## Instalação 🛠
 Siga esses passos para instalar o repositório na sua máquina:

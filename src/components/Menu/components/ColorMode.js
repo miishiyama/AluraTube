@@ -1,16 +1,18 @@
-import React from "react";
+import React from "react"
 
 export const ColorModeContext = React.createContext({
-    mode: "",
-});
+    mode: ""
+})
 
 export default function ColorModeProvider(props) {
-    const [mode, setMode] = React.useState(props.initialMode);
+    const [mode, setMode] = React.useState(props.initialMode)
     function toggleMode() {
-        if (mode === "dark") setMode("light");
-        if (mode === "light") setMode("dark");
-    };
+        if (mode === "dark") setMode("light")
+        if (mode === "light") setMode("dark")
+    }
     return (
-        <ColorModeContext.Provider value={{ mode: mode, setMode: setMode, toggleMode: toggleMode }}>{props.children}</ColorModeContext.Provider>
-    );
-};
+        <ColorModeContext.Provider value={ { mode: mode, setMode: setMode, toggleMode: toggleMode } }>
+            { props.children }
+        </ColorModeContext.Provider>
+    )
+}

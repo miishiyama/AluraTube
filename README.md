@@ -24,6 +24,7 @@ As tecnologias utilizadas neste projeto são:
 - React
 - React DOM
 - Styled Components
+- Media Queries
 
 ## Créditos ❤️
 Feito por [Millene Eduarda Ishiyama](https://github.com/miishiyama/).

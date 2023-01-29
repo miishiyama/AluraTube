@@ -1,6 +1,8 @@
-import React from "react";
-import styled from "styled-components";
-import { ColorModeContext } from "./ColorMode";
+import React from "react"
+
+import styled from "styled-components"
+
+import { ColorModeContext } from "./ColorMode"
 
 const StyledSwitch = styled.div`
     background-color: #333333;
@@ -14,18 +16,18 @@ const StyledSwitch = styled.div`
     border-radius: 10000px;
     position: relative;
     label {
-        width: 50px;
-    };
+        width: 50px
+    }
     span {
         display: inline-flex; 
         width: 20px; 
         height: 20px; 
         align-items: center; 
-        justify-content: center;
-    };
+        justify-content: center
+    }
     label:before {
         content: "";
-        background-color: #fafafa;
+        background-color: #FAFAFA;
         border: 1px solid #333333;
         width: 24px;
         height: 24px;
@@ -34,29 +36,33 @@ const StyledSwitch = styled.div`
         top: 0;
         bottom: 0;
         left: 0;
-        transition: .3s;
-        cursor: pointer;
-    };
+        transition: 0.3s;
+        cursor: pointer
+    }
     input[type="checkbox"] {
-        display: none;
-    };
+        display: none
+    }
     input[type="checkbox"]:checked + label:before {
-        transform: translateX(100%);
-    };
-`;
+        transform: translateX(100%)
+    }
+`
 
 export default function DarkModeSwitch() {
-    const contexto = React.useContext(ColorModeContext);
+    const contexto = React.useContext(ColorModeContext)
     return (
         <StyledSwitch>
-            <input id="darkmode" type="checkbox" onChange={() => {
-                contexto.toggleMode();
-            }} 
+            <input id="darkmode" type="checkbox" onChange={ () => {
+                contexto.toggleMode()
+            } } 
             />
             <label htmlFor="darkmode" className="darkmode-switch">
-                <span>🌙</span>
-                <span>☀️</span>
+                <span>
+                    🌙
+                </span>
+                <span>
+                    ☀️
+                </span>
             </label>
         </StyledSwitch>
-    );
-};
+    )
+}

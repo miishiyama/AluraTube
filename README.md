@@ -17,6 +17,7 @@ Siga esses passos para instalar o repositório na sua máquina:
 ## Tecnologias 🚀
 As tecnologias utilizadas neste projeto são:
 - JavaScript
+- DOM
 - Node
 - NPM
 - Supabase

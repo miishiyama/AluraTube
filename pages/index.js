@@ -10,6 +10,8 @@ import { StyledTimeline } from "../src/components/Timeline"
 
 import { videoService } from "../src/services/videoService"
 
+import Head from "next/head"
+
 function HomePage() {
     const service = videoService()
     const [valorDoFiltro, setValorDoFiltro] = React.useState("")
@@ -66,20 +68,28 @@ const StyledBanner = styled.div`
 
 function Header() {
     return (
-        <StyledHeader>
-            <StyledBanner bg={ config.bg } />
-            <section className="user-info">
-                <img src={ `https://github.com/${ config.github }.png` } />
-                <div>
-                    <h2>
-                        { config.name }
-                    </h2>
-                    <p>
-                        { config.description }
-                    </p>
-                </div>
-            </section>
-        </StyledHeader>
+        <>
+            <Head>
+                <link rel="icon" type="image/x-icon" href="https://www.logo.wine/a/logo/YouTube/YouTube-Icon-Full-Color-Logo.wine.svg" />
+                <title>
+                    AluraTube
+                </title>
+            </Head>
+            <StyledHeader>
+                <StyledBanner bg={ config.bg } />
+                <section className="user-info">
+                    <img src={ `https://github.com/${ config.github }.png` } />
+                    <div>
+                        <h2>
+                            { config.name }
+                        </h2>
+                        <p>
+                            { config.description }
+                        </p>
+                    </div>
+                </section>
+            </StyledHeader>
+        </>
     )
 }
 

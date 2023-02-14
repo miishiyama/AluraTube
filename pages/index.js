@@ -70,7 +70,7 @@ function Header() {
     return (
         <>
             <Head>
-                <link rel="icon" type="image/x-icon" href="https://www.logo.wine/a/logo/YouTube/YouTube-Icon-Full-Color-Logo.wine.svg" />
+                <link rel="shortcut icon" href="https://www.logo.wine/a/logo/YouTube/YouTube-Icon-Full-Color-Logo.wine.svg" type="image/x-icon" />
                 <title>
                     AluraTube
                 </title>
